@@ -1,3 +1,4 @@
+umask 22
 export CLARA_HOME=./clara-cre
 ./gradlew
 ./gradlew deploy
