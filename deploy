@@ -1,5 +1,5 @@
 export CLARA_HOME=./clara-cre
 ./gradlew
 ./gradlew deploy
-echo tar -czvf clara-cre-XXX.tar.gz clara-cre
+tar -czvf clara-cre-XXX.tar.gz clara-cre
 scp clara-cre-XXX.tar.gz clas12@ifarm1901:/group/clas/www/clasweb/html/clas12offline/distribution/clara
