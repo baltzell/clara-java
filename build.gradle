@@ -227,43 +227,6 @@ def deploySpec = copySpec {
     from tempDir
 }
 
-task distSources(type: Tar, dependsOn: build) {
-    extension = 'tar.gz'
-    classifier = 'src'
-    compression = Compression.GZIP
-
-    into "${baseName}-${version}-${classifier}"
-
-    from 'README.md'
-    from 'build.gradle'
-    from 'gradlew'
-    from 'gradlew.bat'
-
-    from('config') {
-        into 'config'
-    }
-    from('gradle') {
-        into 'gradle'
-    }
-    from('scripts') {
-        into 'scripts'
-    }
-    from('src') {
-        into 'src'
-    }
-    from('test') {
-        into 'test'
-    }
-}
-
-task distBinaries(type: Tar, dependsOn: build) {
-    extension = 'tar.gz'
-    compression = Compression.GZIP
-
-    into "${baseName}-${version}"
-    with deploySpec
-}
-
 task deploy(type: Copy, dependsOn: jar) {
     def dest = "$System.env.CLARA_HOME"
 
