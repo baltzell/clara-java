@@ -1,6 +1,0 @@
-#!/bin/bash
-
-DEV_TAG=claradk-$CACHE_TAG
-DEV_TAG=${DEV_TAG%-latest}
-
-docker push $DOCKER_REPO:$DEV_TAG
