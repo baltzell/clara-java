@@ -35,8 +35,8 @@ group = 'org.jlab.coda'
 archivesBaseName = 'jclara'
 version = '4.3-SNAPSHOT'
 
-sourceCompatibility = JavaVersion.VERSION_21
-targetCompatibility = JavaVersion.VERSION_21
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 defaultTasks 'build'
 
